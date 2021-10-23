@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Kabuki</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_designs">Diseños</string>
+    <string name="menu_contact">Contacto</string>
+    <string name="menu_profile">Perfil</string>
+    <string name="about_title"><![CDATA[ <font color=#dc3545>Diseños exclusivos para estilos alternativos</font> VENTA DE ROPA.]]> </string>
+    <string name="about_description"><![CDATA[ <font color=#dc3545>KABUKI CLOTHING</font> es un emprendimiento caleño dedicado a la venta de camisas estampadas con diseños de su propia autoría, las prendas pueden ser utilizadas por hombres y mujeres por igual, dentro de su modo de operación este emprendimiento saca un número determinado de prendas para cada colección. Donde cada diseño independiente se repite una vez por cada talla y color de camiseta con el fin de dar exclusividad a la marca]]></string>
+    <string name="about_designs"><![CDATA[ <font color=#dc3545>Diseños inspirados en los tatuajes</font><br> nuestros diseños, son unicos te prometemos que nunca enontraras lo mismo en otro lugar; y si lo encuentras es por que algo estamos haciendo bien]]></string>
+    <string name="design_buy">Comprar Este Diseño</string>
+    <string name="design_title">ESCOGE TU DISEÑO, QUEDAN POCOS</string>
+    <string name="contact_title">LLENA LOS DATOS TE CONTACTAREMOS</string>
+    <string name="autor">KABUKI CLOTHING © Todos los derechos reservados 2021</string>
+    <string name="contact">COMUNICATE CON NOSOTROS</string>
+    <string name="contact_mail">Correo Electronico</string>
+    <string name="contact_name">Nombre Completo</string>
+    <string name="contact_size">Talla</string>
+    <string name="contact_amount">Cantidad</string>
+    <string name="contact_design">Diseño</string>
+    <string name="contact_phone">Telefono</string>
+    <string name="contact_address">Dirección de Envio</string>
+    <string name="contact_pass">Contraseña</string>
+    <string name="contact_send">Enviar</string>
+    <string name="login_title">INICIA SESION POR FAVOR</string>
+    <string name="register_title">REGALANOS TUS DATOS PARA REGISTRARTE</string>
+    <string name="register_button">REGISTRARME</string>
+    <string name="login_button">Iniciar</string>
+    <string name="login_button_register">Registrate</string>
+    <string name="login_connect">Mantener Conectado</string>
+    <string name="login_pass_confirm">Confirmar tu contraseña</string>
+    <string name="profile_save">Guardar</string>
+    <string name="instagram">@kabukiclothing_oficial</string>
+    <string name="phone">+57 302 851 2884</string>
+    <string name="comming_soon">Proximamente</string>
+</resources>
