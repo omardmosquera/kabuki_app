@@ -16,7 +16,9 @@ import android.graphics.Color;
 import android.os.StrictMode;
 
 import com.kabuki.classes.Producto;
+import com.kabuki.classes.Reserva;
 import com.kabuki.classes.Usuario;
+import com.mysql.jdbc.Blob;
 
 public class MySQL {
     private static final String url = "jdbc:mysql://192.168.1.7:3306/kabuki";
@@ -62,7 +64,8 @@ public class MySQL {
                             rs.getString("nombre"),
                             rs.getString("descripcion"),
                             rs.getString("tallas"),
-                            rs.getBoolean("disponibilidad")
+                            rs.getBoolean("disponibilidad"),
+                            (Blob) rs.getBlob("imagen")
                     ));
                 }
 
@@ -166,6 +169,41 @@ public class MySQL {
             } catch (Exception ex) {
                 new SweetAlertDialog(ctx)
                         .setTitleText("Error al actualizar el usuario:" + ex.getMessage())
+                        .show();
+            }
+        }
+
+        return rs;
+    }
+
+    public int registerReserva(Reserva reserva, Context ctx) {
+        createConexión(ctx);
+
+        int rs = -1;
+
+        if (isConnect) {
+            String query = "INSERT INTO reservas (" +
+                    "producto_id, " +
+                    "usuario_id, " +
+                    "talla, " +
+                    "cantidad, " +
+                    "telefono, " +
+                    "direccion) " +
+                    "VALUES (" +
+                    "\'" + reserva.getProductoId() + "\', " +
+                    "\'" + reserva.getUsuarioId() + "\', " +
+                    "\'" + reserva.getTalla() + "\', " +
+                    "\'" + reserva.getCantidad() + "\', " +
+                    "\'" + reserva.getTelefono() + "\', " +
+                    "\'" + reserva.getDireccion() + "\')";
+
+            try {
+                Statement st = connection.createStatement();
+                rs = st.executeUpdate(query);
+                st.close();
+            } catch (Exception ex) {
+                new SweetAlertDialog(ctx)
+                        .setTitleText("Error al registrar al usuario:" + ex.getMessage())
                         .show();
             }
         }

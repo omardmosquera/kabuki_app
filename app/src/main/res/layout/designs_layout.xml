@@ -47,12 +47,17 @@
                 app:sliderIndicatorSelectedColor="@color/red"
                 app:sliderIndicatorUnselectedColor="@color/gray"
                 app:sliderScrollTimeInSec="1"
-                app:sliderStartAutoCycle="true" />
+                app:sliderStartAutoCycle="true" >
 
-            <ExpandableListView
-                android:id="@+id/product_list"
+            </com.smarteist.autoimageslider.SliderView>
+
+            <LinearLayout
+                android:id="@+id/product_layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="60dp"
+                android:orientation="vertical" />
 
         </LinearLayout>
     </ScrollView>

@@ -1,24 +1,29 @@
 package com.kabuki.classes;
 
+import com.mysql.jdbc.Blob;
+
 public class Producto {
     private int id;
     private String nombre;
     private String descripcion;
     private String tallas;
     private boolean disponibilidad;
+    private Blob imagen;
 
     public Producto(
             int id,
             String nombre,
             String descripcion,
             String tallas,
-            boolean disponibilidad
+            boolean disponibilidad,
+            Blob imagen
     ) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.tallas = tallas;
         this.disponibilidad = disponibilidad;
+        this.imagen = imagen;
     }
 
     public int getId() {
@@ -59,5 +64,13 @@ public class Producto {
 
     public void setDisponibilidad(boolean disponibilidad) {
         this.disponibilidad = disponibilidad;
+    }
+
+    public Blob getImagen() {
+        return this.imagen;
+    }
+
+    public void setImagen(Blob imagen) {
+        this.imagen = imagen;
     }
 }

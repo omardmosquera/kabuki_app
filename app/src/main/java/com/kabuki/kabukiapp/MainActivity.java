@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.kabuki.MySQL.MySQL;
+import com.kabuki.classes.Producto;
 import com.kabuki.classes.Usuario;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     private Usuario usuario;
     private Boolean isUserLogin = false;
     private Boolean showRegister = false;
+    private Boolean showReservar = false;
+    private Producto producto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +39,12 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.action_designs:
                     item.setChecked(true);
-                    showFragment(new DesignsFragment());
+
+                    if (showReservar) {
+                        showFragment(new ReserveFragment());
+                    } else {
+                        showFragment(new DesignsFragment());
+                    }
                     break;
                 case R.id.action_contact:
                     item.setChecked(true);
@@ -70,9 +78,22 @@ public class MainActivity extends AppCompatActivity {
                 .commit();
     }
 
-    public void showRegister(boolean show){
+    public void showRegister(boolean show) {
         this.showRegister = show;
         bnv.setSelectedItemId(R.id.action_profile);
+    }
+
+    public void showReservar(boolean show) {
+        this.showReservar = show;
+        bnv.setSelectedItemId(R.id.action_designs);
+    }
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
+    }
+
+    public Producto getProducto() {
+        return this.producto;
     }
 
     public void loginUser(Usuario usuario) {
