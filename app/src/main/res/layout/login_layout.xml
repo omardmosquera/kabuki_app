@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/contact_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
     android:gravity="center"
-    tools:context=".ProfileActivity">
+    tools:context=".LoginFragment">
 
     <TextView
         android:id="@+id/login_title"
@@ -20,7 +20,7 @@
         android:textColor="#FFFFFF" />
 
     <LinearLayout
-        android:id="@+id/main_layout"
+        android:id="@+id/full_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="55dp"
@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/fullWhite"
                 android:hint="@string/contact_pass"
-                android:password="true" />
+                android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <CheckBox
@@ -81,7 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/red"
-            android:onClick="requestProfile"
+            android:onClick="onLogin"
             android:text="@string/login_button"
             android:textColor="@color/fullWhite" />
 
@@ -92,19 +92,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:backgroundTint="@color/dark"
+            android:onClick="requestRegister"
             android:text="@string/login_button_register"
-            android:textColor="@color/fullWhite"
-            android:onClick="requestRegister"/>
+            android:textColor="@color/fullWhite" />
 
     </LinearLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigation_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/dark"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        app:menu="@menu/menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
 </RelativeLayout>

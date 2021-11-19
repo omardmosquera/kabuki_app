@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/contact_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    tools:context=".ContactActivity">
+    tools:context=".ContactFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
         android:orientation="vertical">
 
         <TextView
@@ -39,14 +39,15 @@
             android:layout_marginStart="30dp"
             android:layout_marginBottom="20dp"
             android:gravity="center"
-            android:orientation="horizontal"
-            android:onClick="goToWhatsapp">
+            android:onClick="goToWhatsapp"
+            android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/whatsapp"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                app:srcCompat="@drawable/whatsapp" />
+                app:srcCompat="@drawable/whatsapp"
+                tools:ignore="ImageContrastCheck" />
 
             <TextView
                 android:id="@+id/whatsapp_info"
@@ -64,8 +65,8 @@
             android:layout_marginStart="30dp"
             android:layout_marginBottom="20dp"
             android:gravity="center"
-            android:orientation="horizontal"
-            android:onClick="goToInstagram">
+            android:onClick="goToInstagram"
+            android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/instagram"
@@ -108,35 +109,19 @@
                 android:textColor="@color/blue" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="55dp"
-            android:gravity="bottom"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/design_title2"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@color/blue"
-                android:gravity="center"
-                android:text="@string/autor"
-                android:textColor="#FFFFFF"
-                android:textColorHighlight="@color/white"
-                android:textColorHint="@color/white"
-                android:textColorLink="@color/white" />
-        </LinearLayout>
-
     </LinearLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigation_bottom"
+    <TextView
+        android:id="@+id/design_title2"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/dark"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        app:menu="@menu/menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:text="@string/autor"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorLink="@color/white"
+        android:layout_alignParentBottom="true"/>
 </RelativeLayout>

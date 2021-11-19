@@ -11,7 +11,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -87,6 +88,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:backgroundTint="@color/fullWhite"
+                    android:inputType="textPassword"
                     android:hint="@string/contact_pass" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,6 +106,7 @@
                     android:layout_marginEnd="20dp"
                     android:backgroundTint="@color/fullWhite"
                     android:hint="@string/login_pass_confirm" />
+                    android:inputType="textPassword"
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -151,19 +154,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/red"
-                android:text="@string/register_button"
-                android:onClick="requestProfile"/>
+                android:onClick="requestProfile"
+                android:text="@string/register_button" />
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="requestProfile"
+                android:text="@string/dialog_cancel" />
 
         </LinearLayout>
     </ScrollView>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigation_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/dark"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        app:menu="@menu/menu" />
 </RelativeLayout>
